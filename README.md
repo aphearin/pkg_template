@@ -13,3 +13,4 @@ $ git add .
 $ git commit -m "Initial commit"
 
 ```
+^This is scripted in bash with the newpkg alias.
