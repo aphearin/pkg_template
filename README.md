@@ -13,4 +13,8 @@ $ git add .
 $ git commit -m "Initial commit"
 
 ```
-^This is scripted in bash with the newpkg alias.
+This is scripted in bash with the newpkg alias, executed as follows:
+
+```
+$ newpkg pkgname /parent/dir/to/write/pkgname
+```
