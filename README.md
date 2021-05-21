@@ -1,5 +1,4 @@
 # pkg_template
-Dummy readme for pkg_template package
 
 ```
 $ cd some/random/working/directory
@@ -13,4 +12,9 @@ $ git init
 $ git add .
 $ git commit -m "Initial commit"
 
+```
+This is scripted in bash with the newpkg alias, executed as follows:
+
+```
+$ newpkg pkgname /parent/dir/to/write/pkgname
 ```
