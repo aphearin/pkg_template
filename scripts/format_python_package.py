@@ -72,10 +72,10 @@ if __name__ == "__main__":
     #  Search for 'pkg_template' and replace with pkgname in the following files:
     setup_fname = os.path.join(root_dirname_pkg, "setup.py")
     readme_fname = os.path.join(root_dirname_pkg, "README.md")
-    coveragearc_fname = os.path.join(root_dirname_pkg, "coveragerc")
+    coveragearc_fname = os.path.join(root_dirname_pkg, "temp_cov.txt")
 
     overwrite_readme(readme_fname, _readme_text)
 
-    fnames_to_modify = [setup_fname, readme_fname]
+    fnames_to_modify = [setup_fname, readme_fname, coveragearc_fname]
     for fname in fnames_to_modify:
         _replace_pkg_template_with_pkgname(fname, pkgname)
