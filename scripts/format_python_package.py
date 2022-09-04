@@ -74,7 +74,7 @@ if __name__ == "__main__":
     cmd = "cp pkg_template/setup.cfg {0}".format(root_dirname_pkg)
     __ = subprocess.check_output(cmd, shell=True)
 
-    cmd = "cp -r pkg_template/.coveragearc {0}".format(root_dirname_pkg)
+    cmd = "cp -r pkg_template/.coveragerc {0}".format(root_dirname_pkg)
     __ = subprocess.check_output(cmd, shell=True)
 
     cmd = "cp pkg_template/.gitignore {0}".format(root_dirname_pkg)
@@ -91,10 +91,10 @@ if __name__ == "__main__":
     #  Search for 'pkg_template' and replace with pkgname in the following files:
     setup_fname = os.path.join(root_dirname_pkg, "setup.py")
     readme_fname = os.path.join(root_dirname_pkg, "README.md")
-    coveragearc_fname = os.path.join(root_dirname_pkg, ".coveragearc")
+    coveragerc_fname = os.path.join(root_dirname_pkg, ".coveragerc")
 
     overwrite_readme(readme_fname, _readme_text)
 
-    fnames_to_modify = [setup_fname, readme_fname, coveragearc_fname]
+    fnames_to_modify = [setup_fname, readme_fname, coveragerc_fname]
     for fname in fnames_to_modify:
         _replace_pkg_template_with_pkgname(fname, pkgname)
