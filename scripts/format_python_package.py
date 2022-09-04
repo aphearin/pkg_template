@@ -16,6 +16,23 @@ def _replace_pkg_template_with_pkgname(pkg_fname, new_pkgname):
             f.write(line)
 
 
+def overwrite_readme(fn, text):
+    with open(fn, "w") as f:
+        f.write(text)
+
+
+_readme_text = """
+# pkg_template
+
+## Installation
+To install pkg_template into your environment from the source code:
+
+```
+$ cd /path/to/root/pkg_template
+$ python setup.py install
+```
+"""
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("pkgname", help="Name of the package being created")
@@ -56,6 +73,9 @@ if __name__ == "__main__":
     #  Search for 'pkg_template' and replace with pkgname in the following files:
     setup_fname = os.path.join(root_dirname_pkg, "setup.py")
     readme_fname = os.path.join(root_dirname_pkg, "README.md")
+
+    overwrite_readme(readme_fname, _readme_text)
+
     fnames_to_modify = [setup_fname, readme_fname]
     for fname in fnames_to_modify:
         _replace_pkg_template_with_pkgname(fname, pkgname)
