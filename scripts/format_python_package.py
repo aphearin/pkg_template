@@ -72,7 +72,7 @@ if __name__ == "__main__":
     #  Search for 'pkg_template' and replace with pkgname in the following files:
     setup_fname = os.path.join(root_dirname_pkg, "setup.py")
     readme_fname = os.path.join(root_dirname_pkg, "README.md")
-    coveragearc_fname = os.path.join(root_dirname_pkg, ".coveragerc")
+    coveragearc_fname = os.path.join(root_dirname_pkg, "coveragerc")
 
     overwrite_readme(readme_fname, _readme_text)
 
