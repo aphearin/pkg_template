@@ -1,0 +1,7 @@
+[run]
+source= pkg_template/
+
+omit =
+    pkg_template/__init__.py
+    pkg_template/_version.py
+    pkg_template/tests/*.py
