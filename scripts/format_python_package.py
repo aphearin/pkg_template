@@ -21,8 +21,7 @@ def overwrite_readme(fn, text):
         f.write(text)
 
 
-_readme_text = """
-pkg_template
+_readme_text = """pkg_template
 ============
 
 Installation
