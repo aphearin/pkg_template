@@ -21,30 +21,28 @@ def overwrite_readme(fn, text):
         f.write(text)
 
 
-_readme_text = """# pkg_template
+_readme_text = """
+pkg_template
+============
 
-## Installation
-To install pkg_template into your environment from the source code:
+Installation
+------------
+To install pkg_template into your environment from the source code::
 
-```
-$ cd /path/to/root/pkg_template
-$ python setup.py install
-```
+    $ cd /path/to/root/pkg_template
+    $ python setup.py install
 
-## Testing
-To run the suite of unit tests:
+Testing
+-------
+To run the suite of unit tests::
 
-```
-$ cd /path/to/root/pkg_template
-$ pytest
-```
+    $ cd /path/to/root/pkg_template
+    $ pytest
 
-To build html of test coverage:
+To build html of test coverage::
 
-```
-$ pytest -v --cov --cov-report html
-$ open htmlcov/index.html
-```
+    $ pytest -v --cov --cov-report html
+    $ open htmlcov/index.html
 
 """
 
@@ -65,7 +63,7 @@ if __name__ == "__main__":
     cmd = "cp pkg_template/LICENSE {0}".format(root_dirname_pkg)
     __ = subprocess.check_output(cmd, shell=True)
 
-    cmd = "cp pkg_template/README.md {0}".format(root_dirname_pkg)
+    cmd = "cp pkg_template/README.rst {0}".format(root_dirname_pkg)
     __ = subprocess.check_output(cmd, shell=True)
 
     cmd = "cp pkg_template/setup.py {0}".format(root_dirname_pkg)
