@@ -1,7 +1,7 @@
 #!/bin/bash
 
-import os
 import argparse
+import os
 import subprocess
 
 
@@ -59,7 +59,7 @@ if __name__ == "__main__":
     except FileExistsError:
         raise FileExistsError("{0} already exists".format(root_dirname_pkg))
 
-    cmd = "cp pkg_template/LICENSE {0}".format(root_dirname_pkg)
+    cmd = "cp pkg_template/LICENSE.rst {0}".format(root_dirname_pkg)
     __ = subprocess.check_output(cmd, shell=True)
 
     cmd = "cp pkg_template/README.rst {0}".format(root_dirname_pkg)
@@ -68,13 +68,19 @@ if __name__ == "__main__":
     cmd = "cp pkg_template/setup.py {0}".format(root_dirname_pkg)
     __ = subprocess.check_output(cmd, shell=True)
 
-    cmd = "cp pkg_template/setup.cfg {0}".format(root_dirname_pkg)
+    cmd = "cp pkg_template/pyproject.toml {0}".format(root_dirname_pkg)
     __ = subprocess.check_output(cmd, shell=True)
 
     cmd = "cp -r pkg_template/.coveragerc {0}".format(root_dirname_pkg)
     __ = subprocess.check_output(cmd, shell=True)
 
     cmd = "cp pkg_template/.gitignore {0}".format(root_dirname_pkg)
+    __ = subprocess.check_output(cmd, shell=True)
+
+    cmd = "cp pkg_template/.git_archival.txt {0}".format(root_dirname_pkg)
+    __ = subprocess.check_output(cmd, shell=True)
+
+    cmd = "cp pkg_template/.gitattributes {0}".format(root_dirname_pkg)
     __ = subprocess.check_output(cmd, shell=True)
 
     cmd = "cp -r pkg_template/pkg_template {0}".format(root_dirname_pkg)
