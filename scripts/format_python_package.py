@@ -29,7 +29,7 @@ Installation
 To install pkg_template into your environment from the source code::
 
     $ cd /path/to/root/pkg_template
-    $ python setup.py install
+    $ pip install .
 
 Testing
 -------
