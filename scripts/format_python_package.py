@@ -95,9 +95,10 @@ if __name__ == "__main__":
     setup_fname = os.path.join(root_dirname_pkg, "setup.py")
     readme_fname = os.path.join(root_dirname_pkg, "README.rst")
     coveragerc_fname = os.path.join(root_dirname_pkg, ".coveragerc")
+    pyproject_fname = os.path.join(root_dirname_pkg, "pyproject.toml")
 
     overwrite_readme(readme_fname, _readme_text)
 
-    fnames_to_modify = [setup_fname, readme_fname, coveragerc_fname]
+    fnames_to_modify = [setup_fname, readme_fname, coveragerc_fname, pyproject_fname]
     for fname in fnames_to_modify:
         _replace_pkg_template_with_pkgname(fname, pkgname)
