@@ -77,6 +77,12 @@ if __name__ == "__main__":
     cmd = "cp pkg_template/.gitignore {0}".format(root_dirname_pkg)
     __ = subprocess.check_output(cmd, shell=True)
 
+    cmd = "cp pkg_template/.git_archival.txt {0}".format(root_dirname_pkg)
+    __ = subprocess.check_output(cmd, shell=True)
+
+    cmd = "cp pkg_template/.gitattributes {0}".format(root_dirname_pkg)
+    __ = subprocess.check_output(cmd, shell=True)
+
     cmd = "cp -r pkg_template/pkg_template {0}".format(root_dirname_pkg)
     __ = subprocess.check_output(cmd, shell=True)
 
